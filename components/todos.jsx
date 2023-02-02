@@ -11,8 +11,9 @@ import {useRouter} from 'next/navigation'
 } */
 
 async function deleteTodo(id,refresh){
-    let req= await fetch(`https://json-api-swart.vercel.app/api/todo/delete?id=${id}`,
+    let req= await fetch(`/api/todo/delete?id=${id}`,
     {method: 'DELETE',
+     
    
 //    body: JSON.stringify({id}),
    }) 

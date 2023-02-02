@@ -7,12 +7,12 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://json-api-swart.vercel.app/api/:path*',
+        destination: "https://json-api-swart.vercel.app/api/:path*",
       },
     ]
   },
 
-
+ 
 }
 
 module.exports = nextConfig
