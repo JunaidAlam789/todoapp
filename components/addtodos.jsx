@@ -3,7 +3,7 @@ import {useRouter} from 'next/navigation'
 import {useState} from 'react'
 
 async function addTodo(name,refresh){
-    let req= await fetch(`/api/todo/add`,
+    let req= await fetch(`https://json-api-swart.vercel.app/api/todo/add`,
     {method: 'POST',
    
     body: JSON.stringify({name}),
