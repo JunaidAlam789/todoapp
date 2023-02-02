@@ -19,10 +19,9 @@ async function deleteTodo(id,refresh){
    refresh()
 }
 async function updateTodo(id,isDone,refresh){
-    let req= await fetch("https://json-api-swart.vercel.app/api/todo/update",
+    let req= await fetch("/api/todo/update",
  {method: 'POST',
- mode: 'no-cors',
-body: JSON.stringify({id,isDone}),
+ body: JSON.stringify({id,isDone}),
 })
 refresh
 }
