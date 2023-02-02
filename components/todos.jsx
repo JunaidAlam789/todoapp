@@ -18,19 +18,19 @@ async function deleteTodo(id,refresh){
    }) 
    refresh()
 }
-async function updateTodo(id,isDone){
+async function updateTodo(id,isDone,refresh){
     let req= await fetch("https://json-api-swart.vercel.app/api/todo/update",
  {method: 'POST',
 body: JSON.stringify({id,isDone}),
 })
-
+refresh
 }
 export default function Todos({todo}){
 const router = useRouter()
 
 return(
     <>
-    <input type="checkbox" onChange={(e)=>updateTodo(todo.id,e.target.checked)}
+    <input type="checkbox" onChange={(e)=>updateTodo(todo.id,e.target.checked,router.refresh)}
     checked={todo.isDone}/>
     {todo.name}
     <button onClick={()=>deleteTodo(todo.id,router.refresh)}>Delete</button>
