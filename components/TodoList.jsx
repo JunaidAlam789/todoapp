@@ -3,7 +3,7 @@ import Todos from "./todos"
 import Addtodos from "./addtodos"
 import {useRouter} from "next/navigation"
 async function getData(){
-let req= await fetch("https://json-api-swart.vercel.app/api/todo/list")
+let req= await fetch("https://todoapp-xi-ecru.vercel.app/api/todo/list")
 /* {method: 'GET',
 mode: 'no-cors',}) */
 

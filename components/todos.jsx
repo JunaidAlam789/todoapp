@@ -11,7 +11,7 @@ import {useRouter} from 'next/navigation'
 } */
 
 async function deleteTodo(id,refresh){
-    let req= await fetch(`/api/todo/delete?id=${id}`,
+    let req= await fetch(`https://todoapp-xi-ecru.vercel.app/api/todo/delete?id=${id}`,
     {method: 'DELETE',
      
    
@@ -20,7 +20,7 @@ async function deleteTodo(id,refresh){
    refresh()
 }
 async function updateTodo(id,isDone,refresh){
-    let req= await fetch("/api/todo/update",
+    let req= await fetch("https://todoapp-xi-ecru.vercel.app/api/todo/update",
  {method: 'POST',
  body: JSON.stringify({id,isDone}),
 })
